@@ -150,20 +150,76 @@ section{
     padding-top:10rem;
 }
 
-.container-info .box{
-    width: auto;
-    height: auto;
-    background-color: #e79a92;
+.buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    height:3rem;
+    width:2.5rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:10px 0 0 10px;
+}
+.is-form.plus {
+    border-radius:0 10px 10px 0;
+}
+.input-qty {
+    background-color:#fff;
+    height:3rem;
+    text-align:center;
+    font-size:1.5rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
 }
 
-.container-info .box .image{
-    width: 50%;
-    height: 50%;
-    background-color: #000000;
+.add_products {
+    overflow:visible;
+    position:relative;
+    background-color:#f9f9f9;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:2px solid #e79a92;
 }
 
-.container-info .box .content{
-    background-color: blueviolet;
+.add_products{
+    border-radius:10px 10px 10px 10px;
+}
+
+.buy {
+    overflow:visible;
+    position:relative;
+    background-color:#f9f9f9;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:2px solid #e79a92;
+}
+
+.buy {
+    border-radius:10px 10px 10px 10px;
 }
 
 @media (max-width:1025px){
