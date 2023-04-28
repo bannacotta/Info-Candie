@@ -20,8 +20,8 @@
     <nav class="navbar col-lg-6">
         <a href="#home">Trang chủ</a>
         <a href="#about">Về Candie Candle</a>
-        <a href="#products">sản phẩm</a>
-        <a href="#contact">liên hệ</a>
+        <a href="#products">Sản Phẩm</a>
+        <a href="#contact">Liên Hệ</a>
     </nav>
 
     <div class="icons">
@@ -40,7 +40,7 @@
     <h4 class="heading">
         <a href="#home">Home</a>
         <a>/</a>
-        <a href="#products">Sản phẩm</a>
+        <a href="#products">Sản Phẩm</a>
         <a>/</a>
         <a>Combo Nến thơm Trang trí EROS và AMOUR</a>
     </h4>
@@ -56,33 +56,35 @@
             <p style="font-size: small; height: 40px; margin-top: 0.4cm; font-family: sans-serif;">Mã sản phẩm: COMBOVLT | Tình trạng: Còn hàng</p>   
 
             <div class="row" style="background-color:rgb(245, 245, 245); height: 60px;">
-                <div class="price col-lg-3" style="font-size: medium; margin-top: 0.5cm;">Giá:</div>
-                <div class="value col-lg-6" style="color:red; font-size: 30px; font-weight: 600; margin-top: 0.25cm;">578,000đ</div>
+                <div class="price col-lg-3">Giá:</div>
+                <div class="sale-cost col-lg-4">578,000đ</div>
+                <div class="real-cost col-lg-3">618,000đ</div>
+                <div class="promo col-lg-1">-6%</div>
             </div> 
 
-            <div class="row" style="height: 60px;">
-                <div class="amount col-lg-3" style="font-size: medium; margin-top: 0.5cm;">Số lượng:</div>
-                <div class="buttons_added col-lg-7" style="margin-top: 0.5cm;">
-                    <input class="minus is-form" type="button" value="-" style="font-size: medium;">
-                    <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number" value="1">
-                    <input class="plus is-form" type="button" value="+" style="font-size: medium;">
+            <div class="row">
+                <div class="quantity col-lg-3">Số lượng:</div>
+                <div class="buttons_added col-lg-7" id="buy_amount">
+                    <input class="minus is-form" id="minus" type="button" value="-">
+                    <input aria-label="quantity" class="input-qty" id="amount" max="20" min="1"  name="amount" type="number" value="1">
+                    <input class="plus is-form" id="plus" type="button" value="+">
                 </div>
             </div>  
 
-            <div class="row" style="height: 60px;">
-                <div class="add_products col-lg-5" type="button" style="font-size: medium; margin-top: 0.4cm; text-align: center;">
+            <div class="row">
+                <div class="add_products col-lg-5" type="button">
                     <p style="margin-top:0.3cm;">THÊM VÀO GIỎ HÀNG</p>
                 </div>
                 <div class="spacing col-1"></div>
-                <div class="buy col-lg-5" type="button" style="font-size: medium; margin-top: 0.4cm; text-align: center;">
+                <div class="buy col-lg-5" type="button">
                     <p style="margin-top:0.3cm;">MUA NGAY</p>
                 </div>
             </div>
 
-            <div class="head" style="font-size: medium; font-weight: 600; margin-top: 1cm;">MÔ TẢ SẢN PHẨM</div>
+            <div class="head">MÔ TẢ SẢN PHẨM</div>
             <hr  size="5px" color="grey">
 
-            <div class="description" style="font-size: small; font-family: sans-serif;">
+            <div class="description">
                 <p style="font-weight: 600;">Combo Nến thơm Quà tặng 14/2 & 8/3</p>
                 <p>Sản phẩm bao gồm: Hộp giấy tinh tế, thiệp viết tay theo yêu cầu</p>
                 <p style="font-weight: 600;">EROS</p>
