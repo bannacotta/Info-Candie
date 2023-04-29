@@ -303,6 +303,18 @@ section{
     padding: 5px;
 }
 
+.item .image .discount{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: #e79a92;
+    z-index: 1;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 15px;
+    padding: 3px 16px;
+}
+
 .information{
     padding-top: 10px;
 }
