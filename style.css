@@ -171,12 +171,8 @@ section{
     padding-top:10rem;
 }
 
-.box .image{
-    transform: translateX(10px) translateY(10px);
-}
-
 .content{
-    height: 60px;
+    height: auto;
 }
 
 .price{
@@ -427,6 +423,8 @@ section{
 		width: 90%;
 		right: 2rem;
 	}
+	
+   
 	
 }
 
