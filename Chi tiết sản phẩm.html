@@ -1,60 +1,199 @@
-let navbar = document.querySelector('.navbar');
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Candie Candle</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
 
-document.querySelector('#menu-btn').onclick = () => {
-	searchForm.classList.remove('active');
-	navbar.classList.toggle('active');
-	cartItem.classList.remove('active');
-}
+<body>
+<header class="container-fluid header">
+	<div class="row col-1">
+		<a href="#" class="logo">
+        <img src="picture/logo.PNG" alt=""></a>
+	</div>
+			
+    <nav class="navbar col-lg-6">
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Về Candie Candle</a>
+        <a href="#products">Sản Phẩm</a>
+        <a href="#contact">Liên Hệ</a>
+    </nav>
 
-let searchForm = document.querySelector('.search-form');
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
 
-document.querySelector('#search-btn').onclick = () => {
-	searchForm.classList.toggle('active');
-	navbar.classList.remove('active');
-	cartItem.classList.remove('active');
-}
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here ...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+    
+</header>
 
-let cartItem = document.querySelector('.cart-item-container');
+<section class="container info">
+    <h4 class="heading">
+        <a href="#home">Home</a>
+        <a>/</a>
+        <a href="#products">Sản Phẩm</a>
+        <a>/</a>
+        <a>Combo Nến thơm Trang trí EROS và AMOUR</a>
+    </h4>
+    <br>
+    <div class="box row">
+        <div class="image col-lg-6 col-md-12 col-sm-12 col-12">
+            <img src="./picture/p13.JPG" alt="" width="100%" row="421">
+        </div>
 
-document.querySelector('#cart-btn').onclick = () => {
-	searchForm.classList.remove('active');
-	navbar.classList.remove('active');
-	cartItem.classList.toggle('active');
-}
+        <div class="content col-lg-6">
+            <h2 style="font-size: x-large;">Combo Nến thơm Trang trí EROS và AMOUR</h2>  
 
-window.onscroll = () =>{
-	navbar.classList.remove('active');
-	searchForm.classList.remove('active');
-	cartItem.classList.remove('active');
-} 
+            <p style="font-size: small; height: 40px; margin-top: 0.4cm; font-family: sans-serif;">Mã sản phẩm: COMBOVLT | Tình trạng: Còn hàng</p>   
 
-let amountElement = document.getElementById('amount');
-let amount = amountElement.value;
-let minus = document.getElementById('minus');
-let plus = document.getElementById('plus');
-let render = (amount) => {
-	amountElement.value = amount;
-}
+            <div class="row" style="background-color:rgb(245, 245, 245);">
+                <div class="price col-lg-3 col-md-3 col-sm-2 col-3">Giá:</div>
+                <div class="sale-cost col-lg-4 col-md-4 col-sm-4 col-9">578,000đ</div>
+                <div class="real-cost col-lg-3 col-md-3 col-sm-3 col-8">618,000đ</div>
+                <div class="promo col-lg-1 col-md-1 col-sm-1 col-2">-6%</div>
+            </div> 
 
-minus.addEventListener('click', function(){
-	if(amount > 1){
-		amount--;
-		render(amount);
-	}
-	return(0);
-}); 
+            <div class="row">
+                <div class="quantity col-lg-3">Số lượng:</div>
+                <div class="buttons_added col-lg-7" id="buy_amount">
+                    <input class="minus is-form" id="minus" type="button" value="-">
+                    <input aria-label="quantity" class="input-qty" id="amount" max="20" min="1"  name="amount" type="number" value="1">
+                    <input class="plus is-form" id="plus" type="button" value="+">
+                </div>
+            </div>  <br>
 
-plus.addEventListener('click', function(){
-	if(amount < 20){
-		amount++;
-		render(amount);
-	}
-});
+            <div class="row">
+                <button class="btn btn-cart" type="button">
+                    <p style="margin-top:0.3cm;">THÊM VÀO GIỎ HÀNG</p>
+                </button>
+                <div class="spacing col-1"></div>
+                <button class="btn btn-cart" type="button">
+                    <p style="margin-top:0.3cm;">MUA NGAY</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-amountElement.addEventListener('input', function(){
-	amount = amountElement.value;
-	amount = parseInt (amount);
-	amount = (isNaN(amount)||amount == 0)?1:amount;
-	render(amount);
-});
+<section class="container description">
+    <div class="head">MÔ TẢ SẢN PHẨM</div>
+            <hr  size="5px" color="grey">
+            <p style="font-weight: 600;">Combo Nến thơm Quà tặng 14/2 & 8/3</p>
+            <p>Sản phẩm bao gồm: Hộp giấy tinh tế, thiệp viết tay theo yêu cầu</p>
+            <p style="font-weight: 600;">EROS</p>
+            <p>Ngọt ngào & Trẻ trung</p>
+            <p><span style="font-weight: 600; text-decoration: underline;">Mô tả mùi hương:</span> Quả Nho, Táo Xanh, Lily, Diên Vĩ, Xạ Hương, Quả Đào, Hổ Phách</p>
+            <br>
+            <p style="font-weight: 600;">AMOUR</p>
+            <p>Trầm ấm & Sâu lắng</p>
+            <p><span style="font-weight: 600; text-decoration: underline;">Mô tả mùi hương:</span> XÔ THƠM, LINH LAN, OẢI HƯƠNG, BẠCH ĐẬU KHẤU, GỖ ĐÀN HƯƠNG, XẠ HƯƠNG, ĐẬU TONKA, VANI AMOUR - hơn cả yêu, chính là thương</p>
+            <p>
+                <span style="font-weight: 600; text-decoration: underline;">Thành phần:</span>
+                <br>
+                Sáp nến có nguồn gốc thực vật: sáp cọ, sáp đậu nành, sáp ong
+                <br>
+                Dầu hương thơm đến từ nhà hương xứ Anh Quốc.
+                <br>
+                Bấc cotton không chì 
+            </p>
+            <p><span style="font-weight: 600; text-decoration: underline;">Khối lượng:</span> 150g</p>
+            <p><span style="font-weight: 600; text-decoration: underline;">Thời gian đốt:</span> 30-40 tiếng</p>
+</section>
 
+<section class="container others">
+    <div class="head">
+        <h2 style="font-size: x-large;">Sản phẩm liên quan</h2>
+    </div>
+
+    <div class="products row" id="products">
+        <div class="item col-lg-3 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="./picture/p11.JPG" alt="" width="100%" row="100%">
+            </div>
+            <div class="information">
+                <h3>Nến thơm EROS</h3>
+                <div class="cost">
+                    <span class = "new-price">199,000đ</span>
+                    <span class = "old-price">200,000đ</span>
+                </div>
+                <a href = "#" class ="add-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+
+        <div class="item col-lg-3 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="./picture/p12.JPG" alt="" width="100%" row="100%">
+            </div>
+            <div class="information">
+                <h3>Nến thơm AMOUR</h3>
+                <div class="cost">
+                    <span class = "new-price">199,000đ</span>
+                    <span class = "old-price">200,000đ</span>
+                </div>
+                <a href = "#" class ="add-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+        
+        <div class="item col-lg-3 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="./picture/p21.JPG" alt="" width="100%" row="100%">
+            </div>
+            <div class="information">
+                <h3>Nến thơm JASMINE</h3>
+                <div class="cost">
+                    <span class = "new-price">199,000đ</span>
+                    <span class = "old-price">200,000đ</span>
+                </div>
+                <a href = "#" class ="add-btn">Thêm vào giỏ</a>
+            </div>
+        </div>     
+        
+        <div class="item col-lg-3 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="./picture/p22.JPG" alt="" width="100%" row="100%">
+            </div>
+            <div class="information">
+                <h3>Nến thơm EROS</h3>
+                <div class="cost">
+                    <span class = "new-price">199,000đ</span>
+                    <span class = "old-price">200,000đ</span>
+                </div>
+                <a href = "#" class ="add-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+    </div>
+</section>
+   
+</div>
+
+<section class="footer">
+    <div class="share">
+        <a class="fab fa-facebook-f"></a>
+        <a class="fab fa-instagram"></a>
+    </div>
+
+    <div class="links">
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Về Candie Candle</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#contact">Liên hệ</a>
+    </div>
+
+    <div class="credit">Created by Nhóm chúng mình</div>
+
+</section>
+
+<script  src="script.js"></script>
+</body>
+
+</html>
